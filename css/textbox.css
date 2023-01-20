@@ -1,0 +1,145 @@
+body {
+  background-color: rgb(0, 0, 51);
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+.buttonText {
+  color: white;
+  font-size: 1.75em;
+  float: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* highlights button in red when mouse hovers over it */
+.button:hover {
+  cursor: pointer;
+  background: linear-gradient(#000000 25%, #680908 100%);
+  border-color: red;
+  margin-left: 30px;
+}
+
+/* ball of light */
+button::after {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 5px solid #f9fe8d;
+  border-radius: 5px;
+  content: "";
+  box-shadow: 0 0 15px 7.5px orange;
+  animation: orb 1.5s infinite linear;
+  opacity: 0;
+}
+
+/* button opacity */
+.button:hover:after {
+  opacity: 10;
+}
+
+/* ball of light rotation animation */
+@keyframes orb {
+  from {
+    transform: rotate(0deg) translateX(20px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(20px) rotate(-360deg);
+  }
+}
+
+/* sets size and bg color of buttons */
+.button {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50px;
+  border: 3px solid black;
+  box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.8),
+    inset 0 2px 1px rgba(255, 255, 255, 1);
+}
+
+/* button styling */
+#generateQuote {
+  background: #04009d;
+  color: #eff1ff;
+  border: solid 1px #424542;
+  box-shadow: 1px 1px #e7dfe7, -1px -1px #e7dfe7, 1px -1px #e7dfe7,
+    -1px 1px #e7dfe7, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
+  width: 100px;
+  height: 50px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #04009d),
+    color-stop(100%, #06004d)
+  );
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin: 30px 670px 0px;
+}
+
+/* next quote button styling */
+#nextQuote {
+  background: #04009d;
+  color: #eff1ff;
+  border: solid 1px #424542;
+  box-shadow: 1px 1px #e7dfe7, -1px -1px #e7dfe7, 1px -1px #e7dfe7,
+    -1px 1px #e7dfe7, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
+  width: 100px;
+  height: 50px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #04009d),
+    color-stop(100%, #06004d)
+  );
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  margin: 30px 670px 0px;
+}
+
+/* textbox color and positioning */
+.ff7 {
+  text-align: center;
+  border: solid 1px #424542;
+  box-shadow: 1px 1px #e7dfe7, -1px -1px #e7dfe7, 1px -1px #e7dfe7,
+    -1px 1px #e7dfe7, 0 -2px #9c9a9c, -2px 0 #7b757b, 0 2px #424542;
+  width: 800px;
+  padding: 5px 10px;
+  margin: auto;
+  background: #04009d;
+  background: -moz-linear-gradient(top, #04009d 0%, #06004d 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #04009d),
+    color-stop(100%, #06004d)
+  );
+  background: -webkit-linear-gradient(top, #04009d 0%, #06004d 100%);
+  background: -o-linear-gradient(top, #04009d 0%, #06004d 100%);
+  background: -ms-linear-gradient(top, #04009d 0%, #06004d 100%);
+  background: linear-gradient(to bottom, #04009d 0%, #06004d 100%);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* changes text size and style */
+.ff7 * {
+  color: #eff1ff;
+  text-shadow: 2px 2px #212421, 1px 1px #212021;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  font-weight: normal;
+}
